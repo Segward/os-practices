@@ -30,26 +30,27 @@ int bar(const char* s, int n) {
 }
 
 int main(int argc, const char** argv) {
-    if (argc < 2) {
-      printf("Usage: %s <integer>\n", argv[0]);
-      return 1;
-    }
+  if (argc < 2) {
+    printf("Usage: %s <integer>\n", argv[0]);
+    return 1;
+  }
 
-    for (int i = 0; argv[1][i] != '\0'; i++) {
-      char c = argv[1][i];
-      if (!isdigit(c)) {
-        printf("Error: Argument must be a positive integer.\n");
-        return 1;
-      }
-    }
-
-    int number = atoi(argv[1]);
-    if (number <= 0) {
+  for (int i = 0; argv[1][i] != '\0'; i++) {
+    char c = argv[1][i];
+    if (!isdigit(c)) {
       printf("Error: Argument must be a positive integer.\n");
       return 1;
     }
+  }
 
-    int (*func_ptr)(const char*, int) = &bar;
-    int r = foo(number, func_ptr);
-    return r;
+  int number = atoi(argv[1]);
+  if (number <= 0) {
+    printf("Error: Argument must be a positive integer.\n");
+    return 1;
+  }
+
+  // unnecessary but fun to do it this way
+  int (*func_ptr)(const char*, int) = &bar;
+  int r = foo(number, func_ptr);
+  return r;
 }
