@@ -1,0 +1,4 @@
+/Users/gustavskyberg/Home/Programming/os-practices/practice-1/build/CMakeFiles/printx.dir
+/Users/gustavskyberg/Home/Programming/os-practices/practice-1/build/CMakeFiles/mem.dir
+/Users/gustavskyberg/Home/Programming/os-practices/practice-1/build/CMakeFiles/edit_cache.dir
+/Users/gustavskyberg/Home/Programming/os-practices/practice-1/build/CMakeFiles/rebuild_cache.dir
